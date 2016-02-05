@@ -1,0 +1,33 @@
+﻿
+<div class="col-md-12 group">
+    <div class="col-md-4">
+        <input type="date" ng-model="fixtureDate" />
+    </div>
+     <div class="col-md-4">
+        <select ng-options="team.Name as team.Name for team in teamList"
+                ng-model="team"
+                id="team">
+        </select>
+    </div>
+    <div class="col-md-4">
+       <select ng-options="opposition.Name as opposition.Name for opposition in oppositionList"
+                ng-model="opposition"
+                id="opposition">
+        </select>
+    </div>
+</div>
+<div class="col-md-12 group">    
+    <div class="col-md-6">
+        {{fixtureAddedMsg}}
+    </div>
+    <div class="col-md-6">
+        <div class="btn-edit fixture-buttons">
+            <button type="button" class="btn btn-primary" ng-click="saveSeasonFixture()">
+                save
+            </button>
+            <button type="button" class="btn btn-default" ng-click="cancel()">
+                cancel
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+﻿#CarouselHolder {
+  margin: 2% 0 4% 0;
+}
+#CarouselHolder .carousel-inner > .item > img {
+  width: 100%;
+}

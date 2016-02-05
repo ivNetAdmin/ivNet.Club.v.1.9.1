@@ -1,0 +1,26 @@
+﻿<div class="col-md-12 group">
+    <div class="col-md-4">
+        <select ng-options="season.Name as season.Name for season in seasonList"
+                ng-model="season"
+                id="season">
+            <option value="">All Seasons</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <select ng-options="team.Name as team.Name for team in teamList"
+                ng-model="team"
+                id="team">
+            <option value="">All Teams</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <input type="date" ng-model="fixtureDate" />
+    </div>
+</div>
+<div class="col-md-12 group">
+    <div class="col-md-12 fixture-buttons group">
+        <button type="button" class="btn btn-success find" rel="tooltip" title="Find Fixture(s)" ng-click="search()">Find</button>         
+       @* <button type="button" class="btn btn-default add" rel="tooltip" title="Add Fixture" ng-click="add()">Add</button>*@  
+        <button type="button" class="btn btn-default season" rel="tooltip" title="Add Season Fixtures" ng-click="addSeason()">Add</button>
+   </div>
+</div>

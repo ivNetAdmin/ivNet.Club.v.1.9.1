@@ -1,0 +1,22 @@
+﻿@{
+    Script.Require("ivNet.Fixtures");
+    Style.Require("ivNet.Fixtures");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Fixtures" data-ng-controller="FixtureController">
+    <header>
+        <h1>Fixtures</h1>
+    </header>
+
+    <div class="fixture stats-selector">
+        @Html.Partial("Site/Shared/_Selector")
+    </div>
+    
+    <div class="fixture list">
+        @Html.Partial("Site/Fixtures/_Fixtures")
+    </div>
+    
+    <div class="fixture detail">
+        @Html.Partial("Site/Fixtures/_Detail")
+    </div>
+</article>

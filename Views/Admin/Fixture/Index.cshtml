@@ -1,0 +1,41 @@
+﻿@{
+    Script.Require("AngularJSSanitize");
+    Script.Require("xEditable");
+    Script.Require("Bootstrap.TPLS");
+    Script.Require("Bootstrap.Bootbox");    
+    Script.Require("ivNet.Admin.Fixture");
+    Script.Require("CKEditor").AtHead();   
+    
+    Style.Require("xEditable");
+    Style.Require("ivNet.Admin.Fixture");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Admin.Fixture">
+     @Html.Partial("Admin/Fixture/_HelpHeader")       
+    <div class="col-md-12" data-ng-controller="AdminFixtureController">
+        <form editable-form name="tableform" onaftersave="saveFixture()" oncancel="cancel()"> 
+            <div class="fixture fixture-selector">
+                @Html.Partial("Admin/Fixture/_Selector")
+            </div>
+            <div class="fixture list">
+                @Html.Partial("Admin/Fixture/_Fixtures")
+            </div>                          
+            <div class="fixture message">
+                @Html.Partial("Admin/Fixture/_Message")
+            </div>        
+            <div class="fixture detail">
+                @Html.Partial("Admin/Fixture/_Detail")
+            </div>
+            <div class="fixture report">
+                @Html.Partial("Admin/Fixture/_Report")
+            </div>
+            <div class="fixture season">
+                @Html.Partial("Admin/Fixture/_Season")
+            </div>    
+        </form>
+    </div>   
+
+</article>
+
+
+

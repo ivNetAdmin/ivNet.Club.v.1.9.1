@@ -1,0 +1,31 @@
+﻿<div class="col-md-12 group">
+    <div class="col-md-10">
+        <h4>{{title}}</h4>
+    </div>
+    <div class="col-md-2">
+        <a ng-click="backToList()">Back to list</a>
+    </div>
+</div>
+
+<div class="col-md-12 group team-list">
+    <ul>
+        <li ng-repeat="team in teamPlayerList">
+            &#9830; <span>{{ team }}</span>
+        </li>
+    </ul>
+</div>
+
+<div class="col-md-12 group fixture-result">
+       
+        {{ resultType }}:
+              
+         {{ result }}      
+   
+</div>
+
+
+<div class="col-md-12 group">
+    @Html.Partial("Site/Stats/_Batting")
+    @Html.Partial("Site/Stats/_Bowling")
+    @Html.Partial("Site/Stats/_Fielding")
+</div>

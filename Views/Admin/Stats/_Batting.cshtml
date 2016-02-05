@@ -1,0 +1,42 @@
+﻿<div class="col-md-12 group">
+    <div>       
+        <table class="table table-edit table-bordered table-hover table-condensed">
+            <tr style="font-weight: bold">
+                <td><span ng-show="tableform.$visible">Position</span></td>
+                <td>Name</td>
+                <td>Runs</td>
+                <td>How Out</td>
+                <td ng-show="tableform.$visible"></td>
+            </tr>
+            <tr ng-repeat="batStat in battingStats">
+                <td>                        
+                    <span editable-text="batStat.Position" e-form="tableform">
+                        {{ batStat.Position || '' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="batStat.Name" e-typeahead-on-select="setPlayerName($item)" e-typeahead="player.Name + ' ' + player.AgeGroup for player in playerList | filter:$viewValue | limitTo:8">
+                        {{ batStat.Name || 'unknown' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="batStat.Runs" e-form="tableform">
+                        {{ batStat.Runs || '0' }}
+                    </span>
+                </td>
+                <td >                        
+                    <span editable-select="batStat.HowOut" e-form="tableform" e-ng-options="ho.Name as ho.Name for ho in howOutList">
+                        {{ showHowOut(batStat) }}
+                    </span>
+                </td>
+                <td ng-show="tableform.$visible"><button type="button" ng-show="tableform.$visible" ng-click="deleteBattingStat(batStat.PlayerId)" class="btn btn-danger pull-right">Del</button></td>
+            </tr>
+        </table>
+            
+        <!-- buttons -->
+         <div class="btn-form" ng-show="tableform.$visible">
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="addBattingStat()" class="btn btn-default pull-right">add batting stat</button>
+          </div> 
+       
+    </div>
+</div>

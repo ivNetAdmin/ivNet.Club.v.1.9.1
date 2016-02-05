@@ -1,0 +1,22 @@
+﻿<div class="col-md-12 group">
+    <div class="col-md-3">
+        <select ng-options="year.Name as year.Name for year in yearList"
+                ng-model="year"
+                id="year">
+            <option value="">All years</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <select ng-options="team.Name as team.Name for team in teamList"
+                ng-model="team"
+                id="team">
+            <option value="">All teams</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <input type="text" ng-model="player" placeholder="Player name"/>
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-success" ng-click="search()">Go</button>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+﻿
+@using (Html.BeginFormAntiForgeryPost(Url.Action("SaveMember", "ClubAdmin", new {area = "ivNet.Club"}), FormMethod.Post, new {@class = "form-horizontal", id = "editForm"}))
+{
+    <div class="col-md-12">
+        <div class="col-md-4 col-md-offset-8 results-back-button">
+            <a ng-click="showSearchResults()">Back to Search Results...</a>          
+        </div>
+    </div>
+    <div class="col-md-{{detailFormWidth}}">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" ng-model="firstname" name="firstname" placeholder="Enter First Name" required>
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" ng-model="lastname" name="lastname" placeholder="Enter Last Name" required>
+        </div>
+        <div class="form-group" ng-show="player==true">
+            <label>Nick Name</label>
+            <input type="text" class="form-control" ng-model="nickname" name="nickname" placeholder="Enter Nickname">
+        </div>
+        @Html.Partial("Admin/Membership/_Adult") 
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Save</button>
+        </div>  
+    </div>
+    <input type="hidden" ng-model="memberid" name="memberid" value="{{memberid}}"/>
+    @Html.Partial("Admin/Membership/_Wards")
+}

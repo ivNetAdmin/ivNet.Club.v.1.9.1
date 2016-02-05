@@ -1,0 +1,23 @@
+﻿
+@{   
+    Script.Require("ivNet.Admin.TeamSelection");
+    Script.Require("Bootstrap.TPLS");
+    Style.Require("ivNet.Admin.TeamSelection");
+}
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Admin.TeamSelection" data-ng-controller="AdminTeamSelectionController">
+    @Html.Partial("Admin/TeamSelection/_HelpHeader")  
+    <form editable-form name="tableform" onaftersave="saveTeamSelection()" oncancel="cancel()"> 
+        <div class="fixture fixture-selector">
+            @Html.Partial("Admin/TeamSelection/_Selector")
+        </div>  
+        <div class="fixture fixture-list">
+            @Html.Partial("Admin/TeamSelection/_FixtureList")
+        </div>
+        <div class="fixture fixture-detail">
+            @Html.Partial("Admin/TeamSelection/_FixtureDetail")
+        </div>
+        <div class="fixture player-lists">
+            @Html.Partial("Admin/TeamSelection/_PlayerLists")
+        </div>    
+    </form>
+</article>

@@ -1,0 +1,14 @@
+﻿<div class="col-md-12 group">
+    <div class="col-md-3">
+        <h3>{{season}}</h3>
+    </div>
+    <div class="col-md-6">
+        <select ng-options="team.Name as team.Name for team in teamList"
+                ng-model="team"
+                id="team">           
+        </select>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-success find" rel="tooltip" title="Find Fixture(s)" ng-click="search()">Find</button>
+    </div>
+</div>

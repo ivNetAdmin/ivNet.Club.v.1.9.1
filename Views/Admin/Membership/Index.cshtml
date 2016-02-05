@@ -1,0 +1,20 @@
+﻿@{
+    Script.Require("ivNet.Admin.Membership");
+    Style.Require("ivNet.Admin.Membership");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Admin.Membership" data-ng-controller="AdminMembershipController">
+    @Html.Partial("Admin/Membership/_HelpHeader") 
+
+    <div class="member member-selector">
+        @Html.Partial("Admin/Membership/_Selector")
+    </div>
+
+    <div class="member list">
+        @Html.Partial("Admin/Membership/_Members")
+    </div>
+
+    <div class="member detail">
+        @Html.Partial("Admin/Membership/_Detail")
+    </div>
+</article>

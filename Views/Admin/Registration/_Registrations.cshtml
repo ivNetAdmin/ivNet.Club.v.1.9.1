@@ -1,0 +1,19 @@
+﻿<div class="col-md-12 group list">
+    <table class="registration-table" 
+           tr-ng-grid='' 
+           items='registrations'            
+           enable-filtering="false" 
+           enable-sorting="false">
+        <thead>
+            <th field-name="Name" display-name="Member"></th> 
+            <th field-name="CreateDate" display-name="Registration Date" display-format="registrationDateField:gridItem"></th> 
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <i class="btn btn-warning icon-check icon-white" ng-click="vetMember(gridItem)" rel="tooltip" title="Vet"></i>
+                </td>             
+            </tr>
+        </tbody>
+    </table>
+</div>

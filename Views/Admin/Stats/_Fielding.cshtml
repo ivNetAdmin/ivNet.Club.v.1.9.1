@@ -1,0 +1,52 @@
+﻿<div class="col-md-12 group">
+    <div>
+        <table class="table table-edit table-bordered table-hover table-condensed">
+            <tr style="font-weight: bold">
+                <td>Name</td>
+                <td>Catches</td>
+                <td>Stumpings</td>
+                <td ng-show="tableform.$visible"></td>
+            </tr>
+            <tr ng-repeat="fieldingStat in fieldingStats">
+                <td>                        
+                    <span editable-text="fieldingStat.Name" e-typeahead="player.Name + ' ' + player.AgeGroup for player in playerList | filter:$viewValue | limitTo:8">
+                        {{ fieldingStat.Name || 'unknown' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="fieldingStat.Catches" e-form="tableform">
+                        {{ fieldingStat.Catches || '0' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="fieldingStat.Stumpings" e-form="tableform">
+                        {{ fieldingStat.Stumpings || '0' }}
+                    </span>
+                </td>             
+                <td ng-show="tableform.$visible"><button type="button" ng-show="tableform.$visible" ng-click="deleteFieldingStat(fieldingStat.PlayerId)" class="btn btn-danger pull-right">Del</button></td>
+            </tr>
+        </table>
+        
+        <!-- buttons -->
+        <div class="btn-edit">
+            <button type="button" class="btn btn-primary" ng-show="!tableform.$visible" ng-click="tableform.$show()">
+                edit
+            </button>
+            <button type="button" class="btn btn-default" ng-show="!tableform.$visible" ng-click="cancel()">
+                cancel
+            </button>
+              <button type="button" class="btn btn-danger" ng-show="!tableform.$visible" ng-click="delete()">
+                delete
+            </button>
+        </div>
+        <div class="btn-form" ng-show="tableform.$visible">
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="addFieldingStat()" class="btn btn-default pull-right">add fielding stat</button>
+            <button type="submit" ng-disabled="tableform.$waiting" class="btn btn-primary">save</button>
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="tableform.$cancel()" class="btn btn-default">cancel</button>
+        </div> 
+
+    </div>
+</div>
+
+
+   

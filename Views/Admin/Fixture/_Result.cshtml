@@ -1,0 +1,13 @@
+﻿<div class="col-md-2">
+    <span editable-select="resultType" e-name="resultType" e-form="tableform" e-ng-options="r.Name as r.Name for r in resultTypeList">
+        {{ showResultType(resultType) }}:
+    </span>
+</div>
+<div class="col-md-6">
+    <span editable-text="result" e-name="result" e-form="tableform" e-placeholder="Enter result...">
+        {{ result || '' }}
+    </span>
+</div>
+<div class="col-md-4 fixture opposition">
+    @Html.Partial("Admin/Fixture/_Opposition")
+</div>

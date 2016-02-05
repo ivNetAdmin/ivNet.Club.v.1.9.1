@@ -1,0 +1,52 @@
+﻿<div class="col-md-12 group">
+    <div>
+        <table class="table table-edit table-bordered table-hover table-condensed">
+            <tr style="font-weight: bold">
+                <td>Name</td>
+                <td>Overs</td>
+                <td>Maidens</td>
+                <td>Runs</td>
+                <td>Wickets</td>
+                <td ng-show="tableform.$visible"></td>
+            </tr>
+            <tr ng-repeat="bowlingStat in bowlingStats">
+                <td>                        
+                    <span editable-text="bowlingStat.Name"  e-typeahead="player.Name + ' ' + player.AgeGroup for player in playerList | filter:$viewValue | limitTo:8">
+                        {{ bowlingStat.Name || 'unknown' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="bowlingStat.Overs" e-form="tableform">
+                        {{ bowlingStat.Overs || '0' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="bowlingStat.Maidens" e-form="tableform">
+                        {{ bowlingStat.Maidens || '0' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="bowlingStat.Runs" e-form="tableform">
+                        {{ bowlingStat.Runs || '0' }}
+                    </span>
+                </td>
+                <td>                        
+                    <span editable-text="bowlingStat.Wickets" e-form="tableform">
+                        {{ bowlingStat.Wickets || '0' }}
+                    </span>
+                </td>
+                <td ng-show="tableform.$visible"><button type="button" ng-show="tableform.$visible" ng-click="deleteBowlingStat(bowlingStat.PlayerId)" class="btn btn-danger pull-right">Del</button></td>
+            </tr>
+        </table>
+        
+        <!-- buttons -->
+    
+        <div class="btn-form" ng-show="tableform.$visible">
+            <button type="button" ng-disabled="tableform.$waiting" ng-click="addBowlingStat()" class="btn btn-default pull-right">add bowling stat</button>
+        </div> 
+
+    </div>
+</div>
+
+
+   

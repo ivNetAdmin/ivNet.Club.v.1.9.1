@@ -1,0 +1,24 @@
+﻿@{
+    
+    //Script.Require("AngularRouter");
+    Script.Require("ivNet.Availability");
+    //Script.Require("Bootstrap.TPLS");
+
+    Style.Require("ivNet.Availability");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Availability" data-ng-controller="AvailabilityController">
+    <header>
+        <h1>My Availability</h1>
+    </header>
+   <p>Click on the date to toggle your availability for (weekend) selection</p>
+    <table class="table table-striped availability-table">
+        <tr ng-repeat="month in months">
+            <td>{{month.Name}}</td>
+            <td ng-repeat="day in month.Days track by $index" id="{{month.Name}}{{day.Date}}" class="{{day.Weekend}} available-{{day.Available}}" ng-click="toggleAvailability()">
+                {{day.Date}}
+            </td>            
+        </tr>
+    </table>
+    <p><span class="Sat">Saturday</span> <span class="Sun">Sunday</span> <span class="available">Available</span></p>
+</article>

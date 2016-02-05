@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{168B3A7A-9C13-4BE4-BEB1-00B9A668B6D3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ivNet.Club</RootNamespace>
+    <AssemblyName>ivNet.Club</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\..\..\OrchardBasicCorrectness.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\packages\AutoMapper.4.0.4\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=1.4.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\nhibernate\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\newtonsoft.json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\nhibernate\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetwebapi\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ivNet.Club.sdf" />
+    <Content Include="Scripts\ivNet\admin\fixture.min.js" />
+    <Content Include="Scripts\ivNet\admin\membership.min.js" />
+    <Content Include="Scripts\ivNet\admin\registration.min.js" />
+    <Content Include="Scripts\ivNet\admin\teamselection.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-autocomplete.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-resource.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-resource.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-sanitize.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-ui-router.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-ui-utils.js" />
+    <Content Include="Scripts\ivNet\anjularJs\angular-ui-utils.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\anjular.js" />
+    <Content Include="Scripts\ivNet\anjularJs\anjular.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\bootstrap-tagsinput-angular.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\bootstrap-tagsinput.min.js" />
+    <Content Include="Scripts\ivNet\anjularJs\xeditable.js" />
+    <Content Include="Scripts\ivNet\anjularJs\xeditable.min.js" />
+    <Content Include="Scripts\ivNet\availability.min.js" />
+    <Content Include="Scripts\ivNet\bootstrap\bootbox.min.js" />
+    <Content Include="Scripts\ivNet\bootstrap\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\ivNet\carousel.min.js" />
+    <Content Include="Scripts\ivNet\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ivNet\ckeditor\config.js" />
+    <Content Include="Scripts\ivNet\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\dialog.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\icons.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\close.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="Scripts\ivNet\ckeditor\styles.js" />
+    <Content Include="Scripts\ivNet\configure.min.js" />
+    <Content Include="Scripts\ivNet\fixtures.min.js" />
+    <Content Include="Scripts\ivNet\help.min.js" />
+    <Content Include="Scripts\ivNet\registration.min.js" />
+    <Content Include="Scripts\ivNet\stats.min.js" />
+    <Content Include="Scripts\ivNet\members.min.js" />
+    <Content Include="Scripts\ivNet\trNgGrid\trNgGrid.min.js" />
+    <Content Include="Styles\admin\fixture.css">
+      <DependentUpon>fixture.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\registrations.css">
+      <DependentUpon>registrations.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\registrations.min.css" />
+    <Content Include="Styles\admin\fixture.min.css" />
+    <Content Include="Styles\admin\membership.css">
+      <DependentUpon>membership.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\membership.min.css">
+      <DependentUpon>membership.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\teamselection.css">
+      <DependentUpon>teamselection.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\teamselection.min.css">
+      <DependentUpon>teamselection.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\admin\xeditable.css" />
+    <Content Include="Styles\availability.css">
+      <DependentUpon>availability.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\availability.min.css">
+      <DependentUpon>availability.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\Bootstrap\bootstrap-responsive.min.css" />
+    <Content Include="Styles\Bootstrap\bootstrap.min.css" />
+    <Content Include="Styles\Bootstrap\font-awesome.min.css" />
+    <Content Include="Styles\carousel.css">
+      <DependentUpon>carousel.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\carousel.min.css">
+      <DependentUpon>carousel.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\ivNet\ckeditor\contents.css" />
+    <Content Include="Styles\configure.css">
+      <DependentUpon>configure.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\configure.min.css">
+      <DependentUpon>configure.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\fixtures.css">
+      <DependentUpon>fixtures.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\fixtures.min.css">
+      <DependentUpon>fixtures.css</DependentUpon>
+    </Content>
+    <Content Include="Styles\members.css">
+      <DependentUpon>members.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\members.min.css">
+      <DependentUpon>members.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\registration.css">
+      <DependentUpon>registration.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\registration.min.css">
+      <DependentUpon>registration.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\stats.css">
+      <DependentUpon>stats.less</DependentUpon>
+    </Content>
+    <Content Include="Styles\stats.min.css">
+      <DependentUpon>stats.css</DependentUpon>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Module.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Orchard.Core">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Orchard.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Orchard.Framework">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Orchard\bin\Debug\Orchard.Framework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Widget-Name-Carousel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\api\AvailabilityController.cs" />
+    <Compile Include="Controllers\api\ConfigurationController.cs" />
+    <Compile Include="Controllers\api\DLController.cs" />
+    <Compile Include="Controllers\api\FixturesController.cs" />
+    <Compile Include="Controllers\api\MembersController.cs" />
+    <Compile Include="Controllers\api\PlayerController.cs" />
+    <Compile Include="Controllers\api\RegistrationController.cs" />
+    <Compile Include="Controllers\api\ReportsController.cs" />
+    <Compile Include="Controllers\api\StatsController.cs" />
+    <Compile Include="Controllers\ClubAdminController.cs" />
+    <Compile Include="Controllers\api\CarouselController.cs" />
+    <Compile Include="Controllers\api\DataloadController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\ClubSiteController.cs" />
+    <Compile Include="Entities\Address.cs" />
+    <Compile Include="Entities\Availability.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\BattingStat.cs" />
+    <Compile Include="Entities\BowlingStat.cs" />
+    <Compile Include="Entities\Contact.cs" />
+    <Compile Include="Entities\FieldingStat.cs" />
+    <Compile Include="Entities\Fixture.cs" />
+    <Compile Include="Entities\Guardian.cs" />
+    <Compile Include="Entities\HowOut.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\MemberType.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\Venue.cs" />
+    <Compile Include="Entities\Competition.cs" />
+    <Compile Include="Entities\ResultType.cs" />
+    <Compile Include="Entities\Team.cs" />
+    <Compile Include="Entities\TeamName.cs" />
+    <Compile Include="Enums\ConfigKey.cs" />
+    <Compile Include="Enums\PlayerType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Enums\TeamType.cs" />
+    <Compile Include="Helpers\CustomStringHelper.cs" />
+    <Compile Include="Helpers\HttpRequestMessageExtensions.cs" />
+    <Compile Include="Helpers\NHibernateHelper.cs" />
+    <Compile Include="Models\ClubImage.cs" />
+    <Compile Include="Models\DataLoad\DLAddress.cs" />
+    <Compile Include="Models\DataLoad\DLContactDetail.cs" />
+    <Compile Include="Models\DataLoad\DLFixture.cs" />
+    <Compile Include="Models\DataLoad\DLGuardianJunior.cs" />
+    <Compile Include="Models\DataLoad\DLMember.cs" />
+    <Compile Include="Models\DataLoad\DLGuardian.cs" />
+    <Compile Include="Models\DataLoad\DLPlayer.cs" />
+    <Compile Include="Models\DataLoad\DLReport.cs" />
+    <Compile Include="Models\DataLoad\DLStat.cs" />
+    <Compile Include="Models\View\AvailabilityModel.cs" />
+    <Compile Include="Models\View\ClubMemberModel.cs" />
+    <Compile Include="Models\View\ConfigItem.cs" />
+    <Compile Include="Models\View\FixtureDetail.cs" />
+    <Compile Include="Models\View\MemberDetailModel.cs" />
+    <Compile Include="Models\View\MemberModel.cs" />
+    <Compile Include="Models\View\MemberVettingModel.cs" />
+    <Compile Include="Models\View\PlayerDetail.cs" />
+    <Compile Include="Models\View\Registration.cs" />
+    <Compile Include="Models\View\ReportDetail.cs" />
+    <Compile Include="Models\View\Roles.cs" />
+    <Compile Include="Models\View\Stats\Batting.cs" />
+    <Compile Include="Models\View\Stats\Bowling.cs" />
+    <Compile Include="Models\View\Stats\Fielding.cs" />
+    <Compile Include="Models\View\Stats\FixtureStats.cs" />
+    <Compile Include="Models\View\Ward.cs" />
+    <Compile Include="Permissions.cs" />
+    <Compile Include="ResourceManifest.cs" />
+    <Compile Include="Routes.cs" />
+    <Compile Include="RoutesApi.cs" />
+    <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\ConfigServices.cs" />
+    <Compile Include="Services\DataLoadServices.cs" />
+    <Compile Include="Services\FixtureServices.cs" />
+    <Compile Include="Services\ImageServices.cs" />
+    <Compile Include="Services\MemberServices.cs" />
+    <Compile Include="Services\PlayerServices.cs" />
+    <Compile Include="Services\ReportServices.cs" />
+    <Compile Include="Services\StatsServices.cs" />
+    <Compile Include="StartupShellEvents.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\carousel.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Configure\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\configure.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Shared\_Selector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_MemberDefinition.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Stats\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\stats.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_PlayerStats.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Stats\_Batting.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Stats\_Bowling.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Stats\_Fielding.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_Fixtures.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Fixtures\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\fixtures.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Fixtures\_Fixtures.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Fixtures\_Detail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_AdminMember.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\admin\membership.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_Selector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_Members.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_Detail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_Wards.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_ClubEntities.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_Adult.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_AdminFixture.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\admin\fixture.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Selector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Fixtures.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\ivNet\anjularJs\angular-resource.min.js.map" />
+    <Content Include="Scripts\ivNet\anjularJs\angular.min.js.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Detail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Stats\_Batting.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Stats\_Bowling.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Stats\_Fielding.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Report.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\ivNet\ckeditor\skins\moono\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Result.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Opposition.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Message.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\registration.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Selector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Name.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Player.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Guardian.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Officer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Contact.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Save.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_Message.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Registration\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\admin\registrations.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Registration\_Registrations.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ivNet.Mail\ivNet.Mail.csproj">
+      <Project>{73947716-1E5A-45A1-8CDC-8826F9885614}</Project>
+      <Name>ivNet.Mail</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Roles\Orchard.Roles.csproj">
+      <Project>{D10AD48F-407D-4DB5-A328-173EC7CB010F}</Project>
+      <Name>Orchard.Roles</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\UserStories\_MemberRegistration.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Members\MyDetails\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\members.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Members\MyDetails\_NameReadOnly.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Members\MyDetails\_ContactDetails.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Members\MyDetails\_Wards.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_Season.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Members\MyAvailability\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\availability.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_Selector.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\admin\teamselection.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_PlayerLists.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_FixtureList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_FixtureDetail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_HelpText.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Fixture\_HelpHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_HelpHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\TeamSelection\_HelpText.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Registration\_HelpHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Registration\_HelpText.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_HelpHeader.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\Membership\_HelpText.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_HelpText.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Site\Registration\_HelpHeader.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45979</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>http://orchard.codeplex.com</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

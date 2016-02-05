@@ -1,0 +1,28 @@
+﻿<div class="col-md-12 group">
+    <div class="col-md-4">
+        <select ng-options="memberType.Name as memberType.Name for memberType in memberTypeList"
+                ng-model="memberType"
+                id="memberType">
+            <option value="">All Members</option>
+        </select>
+    </div>
+    <div class="col-md-1 or-operator">
+        or
+    </div>
+    <div class="col-md-3">
+        <input type="text" ng-model="member" placeholder="Member name" ng-click="DisableTypeSearch()" ng-keypress="checkKey($event)" />
+    </div>
+    <div class="col-md-2">
+        
+        <div class="col-md-6">Active</div>
+        <div class="col-md-4 col-md-push-2"><input type="checkbox" ng-model="active" ng-init="active=true" /></div>
+    
+        <span class="col-md-6">Inactive</span>
+        <span class="col-md-4 col-md-push-2"><input type="checkbox" ng-model="inactive" /></span>
+       
+    </div>
+    <div class="col-md-2">
+        <button type="button" class="btn btn-success" ng-click="search()">Find</button>
+    </div>
+   
+</div>

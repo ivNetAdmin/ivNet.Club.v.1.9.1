@@ -1,0 +1,41 @@
+﻿@{
+    Script.Require("ivNet.Stats");
+    Style.Require("ivNet.Stats");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Stats" data-ng-controller="StatsController">
+    <header>
+        <h1>Stats</h1>
+    </header>
+
+    <div class="stats-selector">
+        @Html.Partial("Site/Shared/_Selector")
+    </div>
+    
+    <div>
+        <ul class="nav nav-pills stats-pills group">
+            <li class="active batting pill"><a ng-click="statsPillClick('batting')">Batting</a></li>
+            <li class="bowling pill"><a ng-click="statsPillClick('bowling')">Bowling</a></li>
+            <li class="fielding pill"><a ng-click="statsPillClick('fielding')">Fielding</a></li>
+        </ul>
+    </div>
+
+    <div class="stats-batting">
+        @Html.Partial("Site/Stats/_Batting")
+    </div>
+    
+    <div class="stats-bowling">
+        @Html.Partial("Site/Stats/_Bowling")
+    </div>
+    
+    <div class="stats-fielding">
+        @Html.Partial("Site/Stats/_Fielding")
+    </div>
+
+</article>
+
+
+   
+
+
+

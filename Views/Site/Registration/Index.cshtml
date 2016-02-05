@@ -1,0 +1,39 @@
+﻿@{
+    Script.Require("ivNet.Registration");
+    Script.Require("Bootstrap.TPLS");
+    
+    Style.Require("ivNet.Registration");
+}
+
+<article class="page content-item orchard-layouts-root group" 
+         data-ng-app="ivNet.Registration" 
+    data-ng-controller="RegistrationController">
+     @Html.Partial("Site/Registration/_HelpHeader")    
+    <div class="col-md-12">
+        @Html.Partial("Site/Registration/_Selector")
+    </div>
+     <div class="col-md-12 registration_message">
+        @Html.Partial("Site/Registration/_Message")
+    </div>
+    <div class="col-md-12 name_input">
+        @Html.Partial("Site/Registration/_Name")
+    </div>
+    <div class="col-md-12 contact_input">
+        @Html.Partial("Site/Registration/_Contact")
+    </div>
+    <div class="col-md-12 player_input">
+        @Html.Partial("Site/Registration/_Player")
+    </div>
+    <div class="col-md-12 guardian_input">
+        @Html.Partial("Site/Registration/_Guardian")
+    </div>
+    <div class="col-md-12 officer_input">
+        @Html.Partial("Site/Registration/_Officer")
+    </div>
+ 
+    <div class="col-md-12 save_buttons">
+        @Html.Partial("Site/Registration/_Save")
+    </div>
+
+</article>
+

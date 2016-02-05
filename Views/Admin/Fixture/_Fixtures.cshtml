@@ -1,0 +1,24 @@
+﻿ <div class="col-md-12 group list">
+     <table class="fixture-table" tr-ng-grid='' items='fixtures' fields='show_fixture_fields'>
+         <thead>
+             <tr>
+                 <th field-name="DatePlayed" display-name="Date Played" display-format="fixtureDateField:gridItem"></th> 
+                 <th field-name="HomeTeam" display-name="Home Team"></th> 
+                 <th field-name="Opposition" display-name="Opposition"></th> 
+                 <th field-name="ResultType" display-name="Result"></th>                  
+             </tr>
+         </thead>
+
+         <tbody>
+             <tr>
+                
+                 <td>
+                     <i class="btn btn-primary icon-edit icon-white" ng-click="editFixture(gridItem)" rel="tooltip" title="Edit Fixture"></i>
+                 </td>
+                 <td>
+                     <i class="btn btn-warning icon-book icon-white" ng-click="editReport(gridItem)" rel="tooltip" title="Edit Report"></i>
+                 </td>
+             </tr>
+         </tbody>
+     </table>
+ </div>

@@ -1,0 +1,32 @@
+﻿
+<div ng-repeat="ward in member.Wards">
+    <div ng-class-even="'dark-bg'" class="group">
+        <div class="form-group col-md-5">
+            <input type="text" ng-model="ward.Firstname" placeholder="Enter First Name"  />
+        </div>
+        <div class="form-group col-md-5">
+            <input type="text" ng-model="ward.Lastname" placeholder="Enter Last Name"/>
+        </div>
+        <div class="form-group col-md-2">
+            <i class="btn btn-danger icon-trash icon-white" ng-click="removeWard()" rel="tooltip" title="Remove"></i>
+        </div>
+        <div class="form-group col-md-5">
+            <input type="text" ng-model="ward.Nickname"  placeholder="Enter Nickname" />
+        </div>
+        <div class="form-group col-md-5">
+            <input type="date" ng-model="ward.DobStr" placeholder="Enter Dob" />
+        </div>
+        <div class="form-group col-md-2">
+            
+        </div>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-6">
+        <button type="button" class="btn btn-success" ng-click="save()">Save</button> 
+        <button type="button" class="btn btn-default" ng-click="reload()">Cancel</button>        
+    </div>
+    <div class="col-md-6 col-md-push-4">
+        <i class="btn btn-primary icon-plus icon-white" ng-click="addWard()" rel="tooltip" title="Add"></i>
+    </div>
+</div>

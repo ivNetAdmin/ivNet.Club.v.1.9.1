@@ -1,0 +1,9 @@
+﻿table.grid {
+  width: 100% !important;
+}
+div.add-button-block {
+  display: none;
+}
+div.add-button-block table {
+  margin-top: 4%;
+}

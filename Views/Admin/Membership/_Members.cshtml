@@ -1,0 +1,21 @@
+﻿<div class="col-md-12 group list">
+    <table class="member-table" tr-ng-grid='' items='members' fields='show_member_fields'>
+        <thead>
+            <tr>
+                @*<th field-name="Name" display-name="Name"></th>
+                <th field-name="PlayerType" display-name="PlayerType"></th>
+                <th field-name="Dob" display-format="dateField:gridItem"></th>*@
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <i class="btn btn-{{gridItem.IsActive?'success':'warning'}} icon-thumbs-{{gridItem.IsActive?'up':'down'}} icon-white" ng-click="activateMember(gridItem)" rel="tooltip" title="{{gridItem.IsActive?'Active':'Inactive'}}"></i>
+                </td>
+                <td>
+                    <i class="btn btn-primary icon-edit icon-white" ng-click="editMember(gridItem)" rel="tooltip" title="Edit Member"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

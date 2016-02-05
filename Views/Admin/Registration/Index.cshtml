@@ -1,0 +1,14 @@
+﻿@{
+    Script.Require("ivNet.Admin.Registration");
+    Style.Require("ivNet.Admin.Registration");
+}
+
+<article class="page content-item orchard-layouts-root group" 
+         data-ng-app="ivNet.Admin.Registration" 
+         data-ng-controller="AdminRegistrationController">
+     @Html.Partial("Admin/Registration/_HelpHeader") 
+    <div class="member list">
+        @Html.Partial("Admin/Registration/_Registrations")
+    </div>
+
+</article>

@@ -1,0 +1,10 @@
+table.list-table {
+  width: 100% !important;
+  cursor: pointer;
+}
+table.list-table tr:hover {
+  color: #808080;
+}
+.modal-dialog {
+  margin: 0 !important;
+}

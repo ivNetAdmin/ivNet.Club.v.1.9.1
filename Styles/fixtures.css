@@ -1,0 +1,31 @@
+﻿div.stats-selector {
+  font-size: small;
+}
+div.stats-selector select {
+  padding: 1%;
+  font-size: small;
+}
+div.stats-selector input {
+  font-size: small;
+}
+div.fixture table {
+  width: inherit !important;
+}
+div.team-list ul {
+  margin-left: 2%;
+}
+div.team-list ul li {
+  display: inline;
+}
+div.team-list ul li span.batting-position {
+  font-weight: bolder;
+}
+div.list {
+  margin-top: 10%;
+}
+a[ng-click] {
+  cursor: pointer;
+}
+.align-text-right {
+  text-align: right;
+}

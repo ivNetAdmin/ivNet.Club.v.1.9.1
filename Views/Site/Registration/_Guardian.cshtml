@@ -1,0 +1,19 @@
+﻿<div class="form-group col-md-12">
+    <label>Junior</label> <i class="btn btn-primary icon-plus icon-white" ng-click="addWard()" rel="tooltip" title="Add"></i>
+</div>
+
+<div ng-repeat="ward in wards">
+    <div class="form-group col-md-6">
+        <input type="text" ng-model="ward.firstname" placeholder="Enter First Name"  />
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" ng-model="ward.lastname" placeholder="Enter Last Name"/>
+    </div>
+    <div class="form-group col-md-6">
+        <input type="text" ng-model="ward.nickname"  placeholder="Enter Nickname" />
+    </div>
+    <div class="form-group col-md-6">
+        <input type="date" ng-model="ward.dob" placeholder="Enter Dob" />
+    </div>
+</div>
+

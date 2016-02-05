@@ -1,0 +1,17 @@
+﻿@*http://vitalets.github.io/angular-xeditable/#editable-row*@
+<div class="col-md-12 group">
+    <div class="fixture-title col-md-10">
+        <h4>{{title}}</h4> 
+    </div>
+    <div class="col-md-2">
+        <a class="back-to-list" ng-click="backToList()">Back to list</a>
+    </div>
+</div>
+<div class="col-md-12 group">
+    <div class="fixture-result">
+        @Html.Partial("Admin/Fixture/_Result")
+    </div>
+    @Html.Partial("Admin/Stats/_Batting")
+    @Html.Partial("Admin/Stats/_Bowling")
+    @Html.Partial("Admin/Stats/_Fielding")         
+</div>

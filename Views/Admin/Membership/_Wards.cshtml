@@ -1,0 +1,40 @@
+﻿ <div class="col-md-7" ng-show="guardian==true">
+     <div class="col-md-12">
+         <div ng-repeat="ward in wards">
+             <div class="col-md-6">
+                 {{$index + 1}}  {{ward.Firstname}} {{ward.Lastname}}
+             </div>
+             <div class="col-md-4">
+                 {{ward.Dob | date:'dd/MM/yyyy'}}
+             </div>
+             <div class="col-md-2">
+                 <i class="btn btn-danger icon-trash icon-white" ng-click="removeWard()" rel="tooltip" title="Remove"></i>
+             </div>
+             <input type="hidden" value="{{ward.MemberId}}" name ="wardMemberId_{{$index + 1}} "/>
+             <input type="hidden" value="{{ward.Lastname}}" name ="wardLastname_{{$index + 1}} "/>
+             <input type="hidden" value="{{ward.Firstname}}" name ="wardFirstname_{{$index + 1}} "/>
+             <input type="hidden" value="{{ward.Nickname}}" name ="wardNickname_{{$index + 1}} "/>
+             <input type="hidden" value="{{ward.Dob | date:'dd/MM/yyyy'}}" name ="wardDob_{{$index + 1}} "/>
+
+         </div>
+     </div>
+     <div class="col-md-12">
+         <input type="text" ng-model="newFirstname" placeholder="Enter First Name"  />
+     </div>
+     <div class="col-md-12">
+         <input type="text" ng-model="newLastname" placeholder="Enter Last Name"/>
+     </div>
+     <div class="col-md-12">
+         <input type="text" ng-model="newNickname"  placeholder="Enter Nickname" />
+     </div>
+
+     <div class="col-md-10">
+         <input type="date" ng-model="newDob" placeholder="Enter Dob" />
+     </div>
+     <div class="col-md-2 col-md-pull-1">
+         <i class="btn btn-primary icon-plus icon-white" ng-click="checkWard()" rel="tooltip" title="Add"></i>
+     </div>
+     <div class="col-md-12 user-message">
+         {{usermessage}}
+     </div>
+ </div>

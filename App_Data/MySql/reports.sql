@@ -1,0 +1,1 @@
+﻿SELECT fixtureid,report,createdby,createdate FROM bwcc_matchreports

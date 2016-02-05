@@ -1,0 +1,27 @@
+﻿<div class="col-md-12 group">
+    
+    <div class="col-md-4">
+        <h3>Team</h3>
+        <table class="table table-striped list-table">
+            <tr ng-repeat="teamPlayer in teamPlayers">
+                <td>{{$index + 1}}</td>
+                <td>{{teamPlayer.Name}}</td>                                                   
+            </tr>
+        </table>
+    </div>
+    
+    <div class="col-md-4">
+        <h3>Available Players</h3>
+        <table class="table table-striped list-table">
+            <tr ng-repeat="availablePlayer in availablePlayers" ng-dblclick="availablePlayerSelected()">               
+                <td>{{availablePlayer.Name}} {{availablePlayer.AgeGroup}}</td>                                                   
+            </tr>
+        </table>
+    </div>
+    <div class="col-md-4">        
+        <h3>All Players</h3>
+        <div class="col-md-12">
+            <input type="text" id="selectedPlayer" placeholder="Search..." ng-model="selectedPlayer" ng-dblclick="playerSelected()" typeahead="player as player.Name + ' ' + player.AgeGroup for player in players | filter:$viewValue | limitTo:20" />
+        </div>    
+    </div>
+</div>

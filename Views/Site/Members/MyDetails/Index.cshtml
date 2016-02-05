@@ -1,0 +1,23 @@
+﻿@{
+    
+    Script.Require("AngularRouter");
+    Script.Require("ivNet.Members");
+    Script.Require("Bootstrap.TPLS");
+    
+    Style.Require("ivNet.Members");
+}
+
+<article class="page content-item orchard-layouts-root group" data-ng-app="ivNet.Members" data-ng-controller="MembersController">
+    <header>
+        <h1>My Details</h1>
+    </header>
+    <div>
+        @Html.Partial("Site/Members/MyDetails/_NameReadOnly")
+    </div>
+    <div ng-show="member.PlayerType!='J'"> 
+        @Html.Partial("Site/Members/MyDetails/_ContactDetails")
+    </div>    
+     <div ng-show="member.MemberTypList.indexOf('Guardian') == 0"> 
+        @Html.Partial("Site/Members/MyDetails/_Wards")
+    </div>
+</article>

@@ -1,0 +1,11 @@
+﻿Name: ivNet.Club
+AntiForgery: enabled
+Author: ivNet
+Website: http://ivnet.co.uk
+Version: 1.0
+OrchardVersion: 1.9.1
+Description: BWCC Club Features
+Category: ivNet
+Features:
+    ivNet.Club:
+        Description: Club Management.

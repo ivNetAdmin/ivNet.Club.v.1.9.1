@@ -1,0 +1,60 @@
+﻿@{
+    Script.Require("ivNet.Configure");
+    Style.Require("ivNet.Configure");
+}
+<article class="page content-item" data-ng-app="ivNet.Configuration" data-ng-controller="ConfigurationController">
+    <header>
+        <h1>Club Admin - Configure</h1>
+    </header>
+
+    <div class="orchard-layouts-root group">
+        <div class="col-md-12">
+            <button type="button" class="btn btn-warning" ng-click="getConfigItems('member_type')">Member Type</button>
+            <button type="button" class="btn btn-warning" ng-click="getConfigItems('hometeam')">Home Team</button>
+            <button type="button" class="btn btn-warning" ng-click="getConfigItems('opposition')">Opposition Team</button>
+        </div>
+        <div class="col-md-12 add-button-block">
+            <table class="grid" tr-ng-grid=''
+                   items='items'
+                   fields='show_config_fields'
+                   enable-filtering="false" enable-sorting="false">
+                <tbody>
+                    <tr>
+                        <td>
+                            <i class="btn btn-danger icon-trash icon-white" ng-click="delConfigItem(gridItem)" rel="tooltip" title="Edit Listing"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12 add-button-block">
+            <div class="col-md-9"><input id="configItemValue" type="text" placeholder="Enter new value..." /></div>
+            <div class="col-md-3"><button type="button" class="btn btn-success" ng-click="addConfigItem()">Add</button></div>
+        </div>
+    </div>
+
+</article>
+
+
+
+@*@{
+    Script.Require("ivNet.Configuration");
+
+    Style.Require("Bootstrap.TagsInput");
+    Style.Require("ivNet.Configuration");
+}
+<div id="ConfigurationGrid" >
+    <div data-ng-controller="ConfigurationController">
+        <section id="configurationEdit">
+            <div class="col-md-6">
+                @Html.Partial("Admin/Configuration/_Categories")
+                @Html.Partial("Admin/Configuration/_RoomType")
+            </div>
+            <div class="col-md-6">
+                @Html.Partial("Admin/Configuration/_TagText")
+                @Html.Partial("Admin/Configuration/_Transport")
+
+            </div>
+        </section>
+    </div>
+</div>*@
